@@ -10,11 +10,19 @@ lazy val implicitsCollection = project
   .in(file("implicits/collection"))
   .configure(ImplicitsModules.collectionProfile)
 
-// zzzzzzzzzzzzzzzzzzzz Wrappers Modules zzzzzzzzzzzzzzzzzzzz
+// zzzzzzzzzzzzzzzzzzzz Base wrappers Modules zzzzzzzzzzzzzzzzzzzz
 
 lazy val wrappersBaseLogging = project
   .in(file("wrappers/base/logging"))
   .configure(WrappersModules.baseLoggingProfile)
+
+// zzzzzzzzzzzzzzzzzzzz Play wrappers Modules zzzzzzzzzzzzzzzzzzzz
+
+lazy val wrappersPlayLogging = project
+  .in(file("wrappers/play/logging"))
+  .dependsOn(wrappersBaseLogging)
+  .aggregate(wrappersBaseLogging)
+  .configure(WrappersModules.playLoggingProfile)
 
 // format: off
 inThisBuild(
