@@ -16,6 +16,11 @@ lazy val wrappersBaseLogging = project
   .in(file("wrappers/base/logging"))
   .configure(WrappersModules.baseLoggingProfile)
 
+lazy val wrappersPlayErrorHandlers = project
+  .in(file("wrappers/play/error-handlers"))
+  .configure(WrappersModules.playErrorHandlers)
+  .dependsOn(wrappersBaseLogging)
+
 // format: off
 inThisBuild(
   List(
