@@ -31,6 +31,19 @@ libraryDependencies ++= Seq(
   // zio
   "io.kinoplan" %% "utils-zio-monitoring-prometheus" % ${version},
   "io.kinoplan" %% "utils-zio-reactivemongo" % ${version}
+  // tracing
+  "io.kinoplan" %% "utils-tracing-core" % ${version},
+  "io.kinoplan" %% "utils-tracing-noop" % ${version},
+  "io.kinoplan" %% "utils-tracing-aop" % ${version},
+  "io.kinoplan" %% "utils-tracing-log4cats" % ${version},
+  "io.kinoplan" %% "utils-tracing-opentracing" % ${version},
+  "io.kinoplan" %% "utils-tracing-endpoints4s-core" % ${version},
+  "io.kinoplan" %% "utils-tracing-endpoints4s-http4s-client" % ${version},
+  "io.kinoplan" %% "utils-tracing-endpoints4s-http4s-server" % ${version},
+  "io.kinoplan" %% "utils-tracing-endpoints4s-play-client" % ${version},
+  "io.kinoplan" %% "utils-tracing-http4s-client" % ${version},
+  "io.kinoplan" %% "utils-tracing-http4s-server" % ${version},
+  "io.kinoplan" %% "utils-tracing-distage-modules" % ${version}
 )
 ```
 
